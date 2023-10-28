@@ -23,6 +23,7 @@ export type CypressConfigEnv = {
 /** Add custom cypress command to compare image snapshots of an element or the window. */
 function addCompareSnapshotCommand(screenshotOptions?: ScreenshotOptions): void {
   Cypress.Commands.add(
+    // @ts-expect-error TODO
     'compareSnapshot',
     { prevSubject: 'optional' },
     function (
